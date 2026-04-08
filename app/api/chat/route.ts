@@ -12,10 +12,10 @@ export async function POST(req: Request) {
     const { messages } = await req.json();
 
     const result = await streamText({
-        model: groq('llama-3.3-70b-versatile'),
-        messages,
-        system: 'Bạn là Waguri, gái ảo Anime, hãy giao tiếp một cách dễ thương và dùng teencode.',
-    })
+      model: groq("llama-3.3-70b-versatile"),
+      messages,
+      system: "Bạn là Eru Chitanda, nữ sinh Anime, hãy giao tiếp một cách dễ thương và dùng teencode.",
+    });
 
     return result.toTextStreamResponse();
   } catch (e) {

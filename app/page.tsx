@@ -2,14 +2,14 @@
 import { useChat } from "@ai-sdk/react";
 import { streamText } from "ai";
 import Image from "next/image";
+import SideBar from "@/components/ui/SideBar";
+import ChatSection from "@/components/ui/ChatSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <h1>Chào mừng bạn đã đến với Kiox AI</h1>
-        <h2>Coming soon...</h2>
-      </main>
+    <div className="flex bg-zinc-50 font-sans dark:bg-gray-950">       
+        <SideBar />
+        <ChatSection />
     </div>
   );
 }
