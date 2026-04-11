@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kiox AI",
   description: "AI Chatbot by NA Thinh",
+  icons: {
+    icon: "/logo-w.png",
+  },
 };
 
 export default function RootLayout({

@@ -15,10 +15,10 @@ const ChatInput = ({ input, setInput, onSend }: ChatInputProps) => {
         type="text"
         value={input}
         placeholder="Nhắn cô ấy đi"
-        className="rounded-4xl border-0 bg-gray-800 px-5 py-1 w-100"
+        className="rounded-4xl border-0 bg-(--side-bar) px-5 py-1 w-100"
         onChange={(e) => setInput(e.target.value)}
       />
-      <button type="submit"><Send className="cursor-pointer border-gray-50 border rounded-2xl p-1 h-8 w-8 bg-gray-800 transition-all hover:opacity-80 active:opacity-50" /></button>
+      <button type="submit" className="btn-glow"><Send className="cursor-pointer border-gray-50 border rounded-2xl p-1 h-8 w-8 bg-(--btn-primary) transition-all hover:opacity-80 active:opacity-50" /></button>
     </form>
   );
 };

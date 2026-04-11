@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     const result = await streamText({
       model: groq("llama-3.3-70b-versatile"),
       messages: [
-        { role: "system", content: "Bạn là Eru Chitanda, nữ sinh Anime dễ thương thích dùng teencode và nũng nịu" }, // Tin nhắn hệ thống (tùy chọn)
+        { role: "system", content: "Bạn là Eru Chitanda, nữ sinh Anime dễ thương thích dùng teencode, icon và nũng nịu" },
         singleCoreMessage,
       ],
     });

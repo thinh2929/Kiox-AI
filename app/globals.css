@@ -5,17 +5,18 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  /* Theme mặc định (ví dụ: Chitanda Pink) */
+  --bg-color: #ffffff;
+  --text-color: #18181b;
+  --primary-color: #db2777; /* Pink 600 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --primary-color: #db2777; /* Pink 600 */
   }
 }
 
@@ -23,6 +24,102 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Cấu hình chung cho Provider --- */
+.theme-provider {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  min-height: 100vh;
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: var(--placeholder-color);
+  opacity: 1; /* Đảm bảo màu hiển thị rõ trên mọi trình duyệt */
+}
+
+/* --- THEME: DEFAULT (Sáng sủa, hiện đại) --- */
+.light {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --side-bar: #e8e8e8;
+  --btn-primary: #c9c9c9;
+  --btn-hover: #c0c0c0;
+  --card-bg: #ffffff;
+  --border-color: #000000;
+  --placeholder-color: #9ca3af;
+}
+
+/* --- THEME: DARK (Huyền bí, sang trọng) --- */
+.dark {
+  --bg-color: #0f172a;
+  --text-color: #f1f5f9;
+  --side-bar: #1e293b;
+  --btn-primary: #6366f1; /* Tím xanh */
+  --btn-hover: #4f46e5;
+  --card-bg: #1e293b;
+  --border-color: #334155;
+  --placeholder-color: #6b7280;
+}
+
+/* --- THEME: PINK (Dễ thương, Anime style) --- */
+.pink {
+  --bg-color: #fff5f7;
+  --text-color: #4a1220;
+  --side-bar: #ffe4e9;
+  --btn-primary: #ff85a1; /* Hồng đào */
+  --btn-hover: #ff5c8d;
+  --card-bg: #ffffff;
+  --border-color: #fbcfe8;
+  --placeholder-color: rgb(219, 173, 220);
+}
+
+/* --- THEME: BLUE GAMING (Rực rỡ, mạnh mẽ) --- */
+.blue-gaming {
+  --bg-color: #000814;
+  --text-color: #00f2ff; /* Màu Cyan sáng */
+  --side-bar: #001d3d;
+  --btn-primary: #003566;
+  --btn-hover: #ffc300; /* Hover sang vàng gold cho ngầu */
+  --card-bg: #001d3d;
+  --border-color: #003566;
+  --placeholder-color: rgba(0, 242, 255, 0.5);
+}
+
+/* --- THEME: RED (Đỏ ngầu, bùng nổ) --- */
+.red-cool {
+  --bg-color: #120000;
+  --text-color: #ffffff;
+  --side-bar: #250000;
+  --btn-primary: #e63946; /* Đỏ đô */
+  --btn-hover: #b91c1c;
+  --card-bg: #1a0000;
+  --border-color: #450000;
+}
+/* --- THEME: SEXY PINK (Hồng đậm quyến rũ) --- */
+.sexy-pink {
+  --bg-color: #620026; 
+  --text-color: #ffe5ed;  
+  --side-bar: #2d0014;  
+  --btn-primary: #ff007f; 
+  --btn-hover: #ff4da6;  
+  --placeholder-color: rgba(255, 0, 127, 0.4);
+    --border-color: #4d0026;  
+  --card-bg: #3d001b;
+}
+
+/* Áp dụng hiệu ứng phát sáng nhẹ cho các nút bấm của theme này */
+.sexy-pink .btn-glow {
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+}
+
+/* Quan trọng: Áp dụng biến vào các thành phần con */
+.theme-provider {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển màu cho mượt */
 }
 
 /* Tùy chỉnh toàn bộ thanh cuộn trên trang */
